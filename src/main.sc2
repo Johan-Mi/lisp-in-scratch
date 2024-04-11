@@ -1,0 +1,11 @@
+sprite Stage {
+    costumes {
+        "backdrop": "assets/blank.gif",
+    }
+}
+
+sprite Main {
+    costumes {
+        "costume": "assets/blank.gif",
+    }
+}
