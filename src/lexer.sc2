@@ -2,6 +2,7 @@ sprite Main {
     let tokens = [] as List[String]
 
     fn lex(_ source-code: String) {
+        tokens.delete-all()
         let buffer = ""
         for i length(source-code) {
             if source-code.letter(i) == " " {
