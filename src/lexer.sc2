@@ -1,0 +1,28 @@
+sprite Main {
+    let tokens = [] as List[String]
+
+    fn lex(_ source-code: String) {
+        let buffer = ""
+        for i length(source-code) {
+            if source-code.letter(i) == " " {
+                if not(buffer == "") {
+                    tokens.push(buffer)
+                }
+                &buffer = ""
+            } else if (source-code.letter(i) == "(")
+                .or(source-code.letter(i) == ")")
+            {
+                if not(buffer == "") {
+                    tokens.push(buffer)
+                }
+                &buffer = ""
+                tokens.push(source-code.letter(i))
+            } else {
+                &buffer = buffer.join(source-code.letter(i))
+            }
+        }
+        if not(buffer == "") {
+            tokens.push(buffer)
+        }
+    }
+}

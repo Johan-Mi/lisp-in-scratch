@@ -1,3 +1,5 @@
+import "lexer.sc2"
+
 sprite Stage {
     costumes {
         "backdrop": "assets/blank.gif",
@@ -7,5 +9,9 @@ sprite Stage {
 sprite Main {
     costumes {
         "costume": "assets/blank.gif",
+    }
+
+    fn when-flag-clicked {
+        lex("(+ 1 2)")
     }
 }
